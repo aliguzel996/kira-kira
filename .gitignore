@@ -7,3 +7,4 @@ windows app/builder-debug.yml
 itch build/win-unpacked/
 itch build/builder-debug.yml
 itch build/*.blockmap
+itch build/latest.yml

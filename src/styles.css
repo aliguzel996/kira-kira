@@ -51,11 +51,12 @@ select {
 }
 
 .upload-zone {
-  display: flex;
+  display: grid;
+  grid-template-columns: 24px 1fr;
   min-height: 42px;
+  align-items: center;
+  gap: 7px;
   cursor: pointer;
-  flex-direction: column;
-  justify-content: center;
   border: 1px solid #ffffff;
   background: #000000;
   padding: 6px;
@@ -74,6 +75,19 @@ button.is-active {
   display: block;
   font-size: 10px;
   line-height: 1;
+}
+
+.upload-logo {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid currentColor;
+  background: #ffffff;
+}
+
+.upload-copy {
+  display: block;
+  min-width: 0;
 }
 
 .upload-sub {
