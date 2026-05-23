@@ -1,0 +1,14 @@
+{
+  "id": "kira-kira",
+  "name": "kira kira",
+  "version": "0.1.0",
+  "shortDescription": "Photo tool for adding glitter highlights.",
+  "aiDescription": "A web and Windows image tool for uploading a photo, adjusting glitter, glow, blade, bokeh, blend, and comparison controls, and exporting the result as a PNG.",
+  "creator": "Ali Güzel",
+  "publisher": "YCSWU",
+  "website": "https://ycswu.co/kira-kira/",
+  "github": "https://github.com/aliguzel996/kira-kira",
+  "downloadUrls": {
+    "windows": ""
+  }
+}
