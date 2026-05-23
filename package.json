@@ -1,0 +1,22 @@
+{
+  "name": "kira-kira",
+  "version": "0.1.0",
+  "description": "Minimal photo glitter effect app.",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.mjs",
+  "author": "guzel",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "make:icon": "node scripts/make-icon.mjs",
+    "build:web": "npm run make:icon && vite build --outDir \"web app\" --emptyOutDir",
+    "pack:windows": "npm run build:web && electron-builder --config electron-builder.windows-app.json",
+    "pack:itch": "npm run build:web && electron-builder --config electron-builder.itch-build.json",
+    "build:all": "npm run build:web && npm run pack:windows && npm run pack:itch"
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-builder": "^24.13.3",
+    "vite": "^5.4.19"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+.env
+windows app/win-unpacked/
+windows app/builder-debug.yml
+itch build/win-unpacked/
+itch build/builder-debug.yml
+itch build/*.blockmap

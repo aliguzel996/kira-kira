@@ -1,0 +1,34 @@
+{
+  "appId": "local.kira-kira.effect",
+  "productName": "kira kira",
+  "directories": {
+    "output": "itch build"
+  },
+  "files": [
+    "electron/**/*",
+    "build/icons/**/*",
+    "web app/**/*",
+    "package.json"
+  ],
+  "win": {
+    "icon": "build/icons/icon.ico",
+    "signAndEditExecutable": true,
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "artifactName": "kira-kira-setup-${version}.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "kira kira",
+    "artifactName": "kira-kira-setup-${version}.${ext}"
+  }
+}

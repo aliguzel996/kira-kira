@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>kira kira</title>
+  </head>
+  <body>
+    <div id="app">
+      <aside class="panel" aria-label="Controls">
+        <label class="upload-zone" for="imageInput">
+          <span class="upload-main">ADD IMAGE</span>
+          <span class="upload-sub">DROP OR SELECT</span>
+        </label>
+        <input id="imageInput" type="file" accept="image/*" />
+
+        <label class="control">
+          <span>POWER</span>
+          <input id="powerInput" type="range" min="0" max="100" value="62" />
+        </label>
+
+        <label class="control">
+          <span>CUTOFF</span>
+          <input id="cutoffInput" type="range" min="80" max="250" value="190" />
+        </label>
+
+        <label class="control">
+          <span>CONTRAST</span>
+          <input id="contrastInput" type="range" min="-100" max="100" value="0" />
+        </label>
+
+        <label class="control">
+          <span>BLADES</span>
+          <input id="bladeInput" type="range" min="1" max="16" step="1" value="4" />
+        </label>
+
+        <label class="control">
+          <span>LENGTH</span>
+          <input id="bladeLengthInput" type="range" min="40" max="220" value="100" />
+        </label>
+
+        <label class="control">
+          <span>BLADE POWER</span>
+          <input id="bladePowerInput" type="range" min="0" max="100" value="72" />
+        </label>
+
+        <label class="control">
+          <span>SHARPNESS</span>
+          <input id="bladeSharpnessInput" type="range" min="0" max="100" value="58" />
+        </label>
+
+        <label class="control">
+          <span>SPREAD</span>
+          <input id="coreSpreadInput" type="range" min="20" max="220" value="100" />
+        </label>
+
+        <label class="control">
+          <span>BLUR</span>
+          <input id="coreBlurInput" type="range" min="0" max="220" value="100" />
+        </label>
+
+        <label class="control check-control">
+          <span>BOKEH</span>
+          <input id="bokehInput" type="checkbox" />
+        </label>
+
+        <label class="control">
+          <span>BOKEH SPREAD</span>
+          <input id="bokehSpreadInput" type="range" min="0" max="220" value="90" />
+        </label>
+
+        <label class="control">
+          <span>BOKEH BLUR</span>
+          <input id="bokehBlurInput" type="range" min="0" max="220" value="120" />
+        </label>
+
+        <label class="control">
+          <span>BLEND</span>
+          <select id="blendModeInput">
+            <option value="source-over">NORMAL</option>
+            <option value="screen">SCREEN</option>
+            <option value="lighten">LIGHTEN</option>
+            <option value="soft-light">SOFT LIGHT</option>
+            <option value="overlay">OVERLAY</option>
+            <option value="hard-light">HARD LIGHT</option>
+            <option value="color-dodge">COLOR DODGE</option>
+            <option value="multiply">MULTIPLY</option>
+            <option value="darken">DARKEN</option>
+            <option value="color-burn">COLOR BURN</option>
+            <option value="difference">DIFFERENCE</option>
+            <option value="exclusion">EXCLUSION</option>
+            <option value="luminosity">LUMINOSITY</option>
+            <option value="color">COLOR</option>
+          </select>
+        </label>
+
+        <label class="control">
+          <span>TOP</span>
+          <select id="blendLayerInput">
+            <option value="effect-over">EFFECT</option>
+            <option value="original-over">ORIGINAL</option>
+          </select>
+        </label>
+
+        <label class="control">
+          <span>BLEND OPACITY</span>
+          <input id="blendOpacityInput" type="range" min="0" max="100" value="100" />
+        </label>
+
+        <button id="compareButton" type="button" aria-pressed="false">SEE ORIGINAL</button>
+        <button id="saveButton" type="button">SAVE PNG</button>
+      </aside>
+
+      <main class="stage" aria-label="Preview">
+        <canvas id="previewCanvas"></canvas>
+        <div id="emptyState" class="empty-state">ADD IMAGE</div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

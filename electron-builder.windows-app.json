@@ -1,0 +1,29 @@
+{
+  "appId": "local.kira-kira.effect",
+  "productName": "kira kira",
+  "directories": {
+    "output": "windows app"
+  },
+  "files": [
+    "electron/**/*",
+    "build/icons/**/*",
+    "web app/**/*",
+    "package.json"
+  ],
+  "win": {
+    "icon": "build/icons/icon.ico",
+    "signAndEditExecutable": true,
+    "target": [
+      {
+        "target": "portable",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "artifactName": "kira-kira-portable-${version}.${ext}"
+  },
+  "portable": {
+    "artifactName": "kira-kira-portable-${version}.${ext}"
+  }
+}
